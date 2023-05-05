@@ -1,4 +1,4 @@
-# 简介
+# 一 简介
 
 XBus 是一个轻量级的事件总线库，旨在提供简单、高效、易用的事件通信机制。我们的设计目标如下：
 
@@ -6,9 +6,9 @@ XBus 是一个轻量级的事件总线库，旨在提供简单、高效、易用
 2. 高性能：提供过反射和注解处理器（APT）生成订阅者方法索引，后者可提高事件查找和调用的性能。
 3. 可扩展性：XEventBus 具有良好的可扩展性，可以根据需求添加更多功能，如优先级控制、延时处理等。
 
-# 快速使用：
+# 二 快速使用：
 
-## 1、根build.gradle中添加仓库来源地址
+## 2.1、根build.gradle中添加仓库来源地址
 
 ```java
 allprojects {
@@ -22,23 +22,23 @@ allprojects {
 }
 ```
 
-## 2、app项目级别build.gradle中添加依赖
+## 2.2、app项目级别build.gradle中添加依赖
 
 ```java
-		implementation 'com.lucas:xbus:1.0.0'
+    implementation 'com.lucas:xbus:1.0.0'
     implementation 'com.lucas:xbus-annotations:1.0.0'
     annotationProcessor 'com.lucas:xbus-apt-processor:1.0.0'
 ```
 
-## 3、使用：
+## 2.3、使用：
 
-### 3.1 Antivity的onCreate方法中注册bus：
+### 2.3.1 Antivity的onCreate方法中注册bus：
 
 ```java
 XEventBus.getDefault().register(MainActivity.this);
 ```
 
-### 3.2 定义一个自己的Event事件：
+### 2.3.2 定义一个自己的Event事件：
 
 ```java
 public class WorkEvent {
@@ -54,7 +54,7 @@ public class WorkEvent {
 }
 ```
 
-### 3.3 对应的Activity中注册方法
+### 2.3.3 对应的Activity中注册方法
 
 ```java
     @Subscribe(priority = 1)
@@ -63,7 +63,7 @@ public class WorkEvent {
     }
 ```
 
-### 3.4 发送事件进行调用
+### 2.3.4 发送事件进行调用
 
 ```java
 XEventBus.getDefault().post(new WorkEvent(5))
