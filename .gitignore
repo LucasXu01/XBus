@@ -12,3 +12,15 @@
 /captures
 .externalNativeBuild
 .cxx
+/.idea/.gitignore
+/annotations/.gitignore
+/app/.gitignore
+/apt_processor/.gitignore
+/xbus/.gitignore
+/.idea/dictionaries/Administrator.xml
+/.idea/compiler.xml
+/.idea/gradle.xml
+/.idea/jarRepositories.xml
+/.idea/misc.xml
+/.idea/codeStyles/Project.xml
+/.idea/vcs.xml
