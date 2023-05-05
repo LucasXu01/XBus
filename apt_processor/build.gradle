@@ -1,0 +1,16 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(path: ':annotations')
+    implementation group: 'com.google.auto.service', name: 'auto-service', version: '1.0-rc6'
+    annotationProcessor 'com.google.auto.service:auto-service:1.0-rc6'
+    implementation group: 'com.squareup', name: 'javapoet', version: '1.12.1'
+}
+
+sourceCompatibility = "8"
+targetCompatibility = "8"
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}

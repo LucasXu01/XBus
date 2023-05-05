@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_send1"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="发送WorkEvent"
+        />
+
+    <Button
+        android:id="@+id/btn_send2"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="主线程发送ViewEvent"
+        />
+
+    <Button
+        android:id="@+id/btn_send3"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="子线程发送ViewEvent"
+        />
+
+    <Button
+        android:id="@+id/btn_send4"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="解注册bus"
+        />
+
+    <Button
+        android:id="@+id/btn_send5"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="注册bus"
+        />
+
+    <Button
+        android:id="@+id/btn_send6"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="优先级测试"
+        />
+
+
+</LinearLayout>
