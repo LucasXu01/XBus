@@ -22,6 +22,9 @@ allprojects {
         maven { url 'https://maven.aliyun.com/repository/jcenter' }
         google()
         jcenter()
+        maven {
+            url 'https://lucasxu01.github.io/maven-repository/'
+        }
         
     }
 }

@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'maven'
 
 android {
     compileSdkVersion 30
@@ -33,5 +34,18 @@ targetCompatibility = "8"
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation project(path: ':annotations')
+//    implementation project(path: ':annotations')
+    implementation 'com.lucas:xbus-annotations:1.0.0'
+}
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: "file:///Users/a58/Downloads/lucas/maven-repository")
+
+            pom.groupId = 'com.lucas'
+            pom.artifactId = 'xbus'
+            pom.version = '1.0.0'
+        }
+    }
 }

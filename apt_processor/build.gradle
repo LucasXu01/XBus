@@ -1,11 +1,14 @@
 apply plugin: 'java-library'
+apply plugin: 'maven'
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation project(path: ':annotations')
     implementation group: 'com.google.auto.service', name: 'auto-service', version: '1.0-rc6'
     annotationProcessor 'com.google.auto.service:auto-service:1.0-rc6'
     implementation group: 'com.squareup', name: 'javapoet', version: '1.12.1'
+
+//    implementation project(path: ':annotations')
+    implementation 'com.lucas:xbus-annotations:1.0.0'
 }
 
 sourceCompatibility = "8"
@@ -13,4 +16,16 @@ targetCompatibility = "8"
 
 tasks.withType(JavaCompile) {
     options.encoding = "UTF-8"
+}
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: "file:///Users/a58/Downloads/lucas/maven-repository")
+
+            pom.groupId = 'com.lucas'
+            pom.artifactId = 'xbus-apt-processor'
+            pom.version = '1.0.0'
+        }
+    }
 }

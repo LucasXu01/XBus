@@ -25,7 +25,11 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation project(':xbus')
-    implementation project(':annotations')
-    annotationProcessor project(':apt_processor')
+//    implementation project(':xbus')
+//    implementation project(':annotations')
+//    annotationProcessor project(':apt_processor')
+
+    implementation 'com.lucas:xbus:1.0.0'
+    implementation 'com.lucas:xbus-annotations:1.0.0'
+    annotationProcessor 'com.lucas:xbus-apt-processor:1.0.0'
 }
