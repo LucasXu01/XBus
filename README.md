@@ -78,4 +78,4 @@ AptMethodFinder aptMethodFinder = new AptMethodFinder();
 XEventBus.builder().setMethodHandle(aptMethodFinder).build().register(this);
 ```
 
-具体使用可参看demo源码；或者体验demo，请点击此处下载 [demo.apk](apkdemo/demo.apk)
+具体使用可参看demo源码；或者体验demo，请点击此处下载 [demo.apk](apkdemo/app-debug.apk)
